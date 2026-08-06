@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,7 +113,6 @@ input,select,textarea{width:100%;padding:10px;margin:6px 0;border:1px solid var(
       <button onclick="filterCat('Restaurant', event)">Restaurant</button>
       <button onclick="filterCat('Supplies', event)">Supplies</button>
       <button onclick="filterCat('Transport', event)">Transport</button>
-      <button onclick="filterCat('Livestock', event)">Livestock</button>
     </div>
     <h2 style="margin:20px 0">📋 Services & Pricing</h2>
     <div class="grid" id="clientProductGrid"><div class="loading">Loading services...</div></div>
@@ -157,7 +156,6 @@ input,select,textarea{width:100%;padding:10px;margin:6px 0;border:1px solid var(
       <button onclick="filterCat('Restaurant', event)">Restaurant</button>
       <button onclick="filterCat('Supplies', event)">Supplies</button>
       <button onclick="filterCat('Transport', event)">Transport</button>
-      <button onclick="filterCat('Livestock', event)">Livestock</button>
     </div>
   </div>
   <div class="container">
@@ -376,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return `<div class="qty-controls"><button class="qty-btn" onclick="decreaseQty('${id}')">-</button><div class="qty-text">${item.qty}</div><button class="qty-btn" onclick="addToCart('${id}')">+</button></div>`;
   }
 
-  function renderClientProducts(){
+    function renderClientProducts(){
     if(!isClientMode) return;
     clientProductGrid.innerHTML = '';
     if(Object.keys(products).length === 0){ clientProductGrid.innerHTML = `<p style="text-align:center;grid-column:1/-1">Loading services...</p>`; return; }
